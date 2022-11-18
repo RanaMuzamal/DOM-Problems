@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Get And Style All Tags</title>
+  </head>
+  <body>
+    <a href="#" onMouseOver="highlightText()" onMouseOut="returnNormal()"
+        >HighLight Text</a
+      >
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      <strong>Reiciendis</strong> ut deserunt maiores quas, eveniet
+      <strong>voluptatibus</strong> nesciunt, consequuntur voluptate vel aliquid
+      adipisci doloribus animi vero, itaque libero exercitationem fuga maxime!
+      Adipisci ut <strong>sapiente</strong> ab aut dignissimos, ratione quis
+      laboriosam commodi bold a dolorem incidunt unde, eum porro, et quam quod
+      distinctio.
+    </p>
+  </body>
+  <script>
+    var boldItems;
+    window.onload = getBolditems();
+    function getBolditems() {
+      boldItems = document.getElementsByTagName("strong");
+    }
+    function highlightText() {
+      for (var i = 0; i < boldItems.length; i++) {
+        boldItems[i].style.color = "yellow";
+      }
+    }
+
+    function returnNormal() {
+      for (var i = 0; i < boldItems.length; i++) {
+        boldItems[i].style.color = "black";
+      }
+    }
+  </script>
+</html>
